@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e0d6963bf4451499c5ca965cc214a2, type: 3}
   m_Name: UserControllerSettings
   m_EditorClassIdentifier: 
-  towerRotateSpeed: 100.1
+  towerRotateSpeed: 100

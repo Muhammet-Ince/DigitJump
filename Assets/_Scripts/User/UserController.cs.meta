@@ -3,7 +3,10 @@ guid: dbb719da0499bb1408b036b2a7d46898
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - userControllerSettings: {fileID: 11400000, guid: c5a93f327c3f3264f89d402bf43cf306, type: 2}
+  - rb: {instanceID: 0}
+  - swerveInputSystem: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

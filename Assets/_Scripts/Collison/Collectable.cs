@@ -1,5 +1,7 @@
+using System;
 using DigitJump.Interfaces;
 using DigitJump.UserData;
+using MText;
 using UnityEngine;
 
 namespace DigitJump.Collsion
@@ -7,10 +9,16 @@ namespace DigitJump.Collsion
     public class Collectable : MonoBehaviour, IInteractable
     {
         private int _tempPower;
+        private Modular3DText textComponent;
 
         [SerializeField] private int collectablePower;
         [SerializeField] private UserDataSettings userDataSettings;
 
+        private void Awake()
+        {
+            GetReferences();
+            InitVariables();
+        }
 
         public void TriggerInteract()
         {
@@ -18,36 +26,21 @@ namespace DigitJump.Collsion
             Destroy(gameObject);
         }
 
-        public void CollisionInteract()
-        {
-            
-        }
-
         private void ScoreSetter()
         {
             _tempPower = userDataSettings.userPower;
-
-            if (userDataSettings.userPower > collectablePower)
-            {
-                _tempPower += collectablePower;
-            }
-
-            else if (userDataSettings.userPower == collectablePower)
-            {
-                _tempPower += collectablePower;
-            }
-
-            else
-            {
-                _tempPower -= collectablePower;
-
-                if (_tempPower <= 0)
-                {
-                    _tempPower = 0;
-                }
-            }
-
+            _tempPower += collectablePower;
             userDataSettings.userPower = _tempPower;
+        }
+
+        private void GetReferences()
+        {
+            textComponent = GetComponent<Modular3DText>();
+        }
+
+        private void InitVariables()
+        {
+            textComponent.Text = collectablePower.ToString();
         }
     }
 }

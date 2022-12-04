@@ -1250,14 +1250,30 @@ PrefabInstance:
       propertyPath: deneme.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2067376146024239054, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
+      propertyPath: slicePower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2067376146024239054, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
+      propertyPath: isBreakable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3027399884764978838, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3037390251329869417, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6313917280747645433, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: dfb69029a360d73428fb378f17de0b82, type: 2}
+      objectReference: {fileID: 2100000, guid: d35778b42d8bbb64eacc749e95e00f91, type: 2}
+    - target: {fileID: 6321378360938209542, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d1a30d5363bf680429a051ef91be8fd4, type: 2}
     - target: {fileID: 6604372139988083266, guid: 3f180a1b6dd176946af862a0a562cbcf, type: 3}
       propertyPath: m_Name
       value: Layer

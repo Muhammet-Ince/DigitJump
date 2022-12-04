@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DigitJump.Interfaces;
+using DigitJump.UserData;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -11,8 +12,10 @@ namespace DigitJump.Collsion
     public class Slice : MonoBehaviour, IInteractable
     {
         private MeshRenderer _meshRenderer;
-
+        
+        [SerializeField] private int slicePower;
         [SerializeField] private TextMeshPro text;
+        [SerializeField] private UserDataSettings userDataSettings;
         
         [FoldoutGroup("Materials")] [SerializeField] private Material safeMaterial;
         [FoldoutGroup("Materials")] [SerializeField] private Material dangerMaterial;
@@ -26,36 +29,64 @@ namespace DigitJump.Collsion
         {
             if (isDanger && !isBreakable)
             {
-                DangerSlice();
+                DangerSliceValidate();
             }
             else if (isBreakable && !isDanger)
             {
-                BreakableSlice();
+                BreakableSliceValidate();
             }
             else
             {
-                SafeSlice();
+                SafeSliceValidate();
             }
         }
 
-        public void TriggerInteract()
+        public void CollisionInteract()
         {
-
+            if (isDanger && !isBreakable)
+            {
+                DangerSliceInteract();
+            }
+            else if (isBreakable && !isDanger)
+            {
+                BreakableSliceInteract();
+            }
         }
 
-        private void DangerSlice()
+        private int _tempPower;
+        private void DangerSliceInteract()
+        {
+            _tempPower = userDataSettings.userPower;
+            _tempPower -= slicePower;
+            userDataSettings.userPower = _tempPower;
+        }
+
+        private void BreakableSliceInteract()
+        {
+            if (userDataSettings.userPower > slicePower)
+            {
+                // Buraya daha guzel bir efekt gerekiyor direkt kapatmak sacma
+                Destroy(gameObject);
+            }
+            else
+            {
+                print("Try Again!");
+            }
+        }
+        
+        private void DangerSliceValidate()
         {
             MaterialChanger(dangerMaterial);
             text.gameObject.SetActive(true);
         }
 
-        private void BreakableSlice()
+        private void BreakableSliceValidate()
         {
             MaterialChanger(breakableMaterial);
             text.gameObject.SetActive(true);
         }
 
-        private void SafeSlice()
+        private void SafeSliceValidate()
         {
             MaterialChanger(safeMaterial);
             text.gameObject.SetActive(false);

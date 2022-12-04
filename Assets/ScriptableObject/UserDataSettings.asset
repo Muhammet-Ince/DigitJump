@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb7a506dc3766c4baa479aa5ea2285a, type: 3}
   m_Name: UserDataSettings
   m_EditorClassIdentifier: 
-  userPower: 0
+  userPower: 12

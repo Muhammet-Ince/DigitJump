@@ -28,6 +28,7 @@ namespace DigitJump.PlayerCollsion
             if (collision.collider.TryGetComponent(out IInteractable interactable))
             {
                 interactable.CollisionInteract();
+                scoreManager.UpdateScoreText();
             }
         }
     }

@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 7261456438657278867}
   - component: {fileID: 4837173182571157337}
   - component: {fileID: 551774074313058745}
-  - component: {fileID: 105040236392808287}
+  - component: {fileID: 588793870587214225}
   m_Layer: 6
   m_Name: Slice
   m_TagString: Untagged
@@ -272,7 +272,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 48350004328225376, guid: dc736cc6e667b224d8465ca2dea0ce9f, type: 3}
---- !u!114 &105040236392808287
+--- !u!114 &588793870587214225
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,7 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3b8419eee8a614fbfdfa8ce9ffff68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slicePower: 0
   text: {fileID: 3218696707490322949}
+  userDataSettings: {fileID: 11400000, guid: ebd6d4b7270f4374698d3f8c1424b081, type: 2}
   safeMaterial: {fileID: 2100000, guid: d35778b42d8bbb64eacc749e95e00f91, type: 2}
   dangerMaterial: {fileID: 2100000, guid: dfb69029a360d73428fb378f17de0b82, type: 2}
   breakableMaterial: {fileID: 2100000, guid: d1a30d5363bf680429a051ef91be8fd4, type: 2}

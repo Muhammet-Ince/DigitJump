@@ -4,6 +4,8 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - text: {instanceID: 0}
+  - userDataSettings: {fileID: 11400000, guid: ebd6d4b7270f4374698d3f8c1424b081, type: 2}
   - safeMaterial: {fileID: 2100000, guid: d35778b42d8bbb64eacc749e95e00f91, type: 2}
   - dangerMaterial: {fileID: 2100000, guid: dfb69029a360d73428fb378f17de0b82, type: 2}
   - breakableMaterial: {fileID: 2100000, guid: d1a30d5363bf680429a051ef91be8fd4, type: 2}

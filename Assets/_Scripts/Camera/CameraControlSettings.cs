@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DigitJump.Camera
+namespace DigitJump.CameraController
 {
     [CreateAssetMenu(menuName = "DigitJump/Camera/CameraControlSettings")]
     public class CameraControlSettings : ScriptableObject

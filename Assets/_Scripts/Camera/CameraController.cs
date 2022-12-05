@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DigitJump.Camera
+namespace DigitJump.CameraController
 {
     public class CameraController : MonoBehaviour
     {
